@@ -35,6 +35,4 @@ if st.button("Start Time Announcements"):
     tts = gTTS(text=text, lang='en')
     tts.save("time.mp3")
     playsound("time.mp3")
-    # st.audio("time.mp3", format="audio/mp3")
-    # os.system("mpg123 time.mp3")
 
