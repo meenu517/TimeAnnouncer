@@ -3,7 +3,7 @@ import streamlit as st
 import pyttsx3
 import time
 import os
-
+import mpg123
 
 # Initialize text-to-speech engine
 # engine = pyttsx3.init()
@@ -34,5 +34,5 @@ if st.button("Start Time Announcements"):
     text = f"The current time is {current_time}"
     tts = gTTS(text=text, lang='en')
     tts.save("time.mp3")
-    os.system("afplay time.mp3")
+    os.system("mpg123 time.mp3")
 
