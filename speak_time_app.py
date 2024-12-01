@@ -62,11 +62,11 @@ if st.button("Start Time Announcements"):
     # play(audio)
     
     # playsound("time.mp3")
-    # Load the WAV file
-    wave_obj = sa.WaveObject.from_wave_file("time.mp3")
+    # # Load the WAV file
+    # wave_obj = sa.WaveObject.from_wave_file("time.mp3")
     
-    # Play the audio
-    play_obj = wave_obj.play()
+    # # Play the audio
+    # play_obj = wave_obj.play()
     
     # Wait for playback to finish before exiting
     # play_obj.wait_done()
