@@ -33,6 +33,7 @@ if st.button("Start Time Announcements"):
     current_time = time.strftime("%I:%M %p")  # Format as "03:15 PM"
     text = f"The current time is {current_time}"
     st.write(f"text is {text}")
+    st.write(f"playsound is:{playsound}")
     tts = gTTS(text=text, lang='en')
     tts.save("time.mp3")
     playsound("time.mp3")
