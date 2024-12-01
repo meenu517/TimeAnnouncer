@@ -40,16 +40,21 @@ if st.button("Start Time Announcements"):
     # st.write(f"playsound is:{playsound}")
     tts = gTTS(text=text, lang='en')
     tts.save("time.mp3")
-    # Initialize mixer
-    pygame.mixer.init()
+    # Embed audio in the app
+    audio_file = open("time.mp3", "rb")
+    audio_bytes = audio_file.read()
+    st.audio(audio_bytes, format="audio/mp3")
+    
+    # # Initialize mixer
+    # pygame.mixer.init()
 
-    # Load and play sound
-    pygame.mixer.music.load("time.mp3")
-    pygame.mixer.music.play()
+    # # Load and play sound
+    # pygame.mixer.music.load("time.mp3")
+    # pygame.mixer.music.play()
 
-    # Wait until the music finishes
-    while pygame.mixer.music.get_busy():
-        pass
+    # # Wait until the music finishes
+    # while pygame.mixer.music.get_busy():
+    #     pass
     # # Load audio file
     # audio = AudioSegment.from_file("time.mp3")
 
