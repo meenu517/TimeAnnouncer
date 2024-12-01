@@ -2,3 +2,5 @@ streamlit
 pyttsx3
 gtts
 playsound
+threading
+time
