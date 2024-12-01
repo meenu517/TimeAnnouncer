@@ -30,5 +30,10 @@ st.write("This app will speak the current time every 5 minutes.")
 
 if st.button("Start Time Announcements"):
     st.write("Time announcements started!")
-    start_time_announcement()
+    # start_time_announcement()
+    current_time = time.strftime("%I:%M %p")  # Format as "03:15 PM"
+    text = f"The current time is {current_time}"
+    tts = gTTS(text=text, lang='en')
+    tts.save("time.mp3")
+    playsound("time.mp3")
 
