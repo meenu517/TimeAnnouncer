@@ -1,4 +1,4 @@
 streamlit
 pyttsx3
 gtts
-playaudio # Include custom modules or dependencies
+playsound # Include custom modules or dependencies
