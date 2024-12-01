@@ -3,8 +3,9 @@ import streamlit as st
 import pyttsx3
 import time
 import os
-from pydub import AudioSegment
-from pydub.playback import play
+import vlc
+# from pydub import AudioSegment
+# from pydub.playback import play
 # import playsound
 # import simpleaudio as sa
 
@@ -39,11 +40,16 @@ if st.button("Start Time Announcements"):
     # st.write(f"playsound is:{playsound}")
     tts = gTTS(text=text, lang='en')
     tts.save("time.mp3")
-    # Load audio file
-    audio = AudioSegment.from_file("time.mp3")
+    # Create a VLC media player instance
+    player = vlc.MediaPlayer("time.mp3")
+    
+    # Play the file
+    player.play()
+    # # Load audio file
+    # audio = AudioSegment.from_file("time.mp3")
 
-    # Play audio
-    play(audio)
+    # # Play audio
+    # play(audio)
     
     # playsound("time.mp3")
     # Load the WAV file
