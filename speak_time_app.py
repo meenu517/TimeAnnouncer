@@ -3,7 +3,7 @@ import streamlit as st
 import pyttsx3
 import time
 import os
-import vlc
+import pygame
 # from pydub import AudioSegment
 # from pydub.playback import play
 # import playsound
@@ -40,11 +40,16 @@ if st.button("Start Time Announcements"):
     # st.write(f"playsound is:{playsound}")
     tts = gTTS(text=text, lang='en')
     tts.save("time.mp3")
-    # Create a VLC media player instance
-    player = vlc.MediaPlayer("time.mp3")
-    
-    # Play the file
-    player.play()
+    # Initialize mixer
+    pygame.mixer.init()
+
+    # Load and play sound
+    pygame.mixer.music.load("time.mp3")
+    pygame.mixer.music.play()
+
+    # Wait until the music finishes
+    while pygame.mixer.music.get_busy():
+        pass
     # # Load audio file
     # audio = AudioSegment.from_file("time.mp3")
 
