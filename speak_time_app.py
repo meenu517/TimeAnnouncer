@@ -7,7 +7,7 @@ from playsound import playsound
 
 
 # Initialize text-to-speech engine
-engine = pyttsx3.init()
+# engine = pyttsx3.init()
 
 # Function to speak the time
 def speak_time_gtts():
