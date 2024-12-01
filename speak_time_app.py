@@ -4,7 +4,7 @@ import time
 import threading
 
 # Initialize text-to-speech engine
-engine = pyttsx3.init()
+engine = pyttsx3.init(driverName='espeak')
 
 # Function to speak the time
 def speak_time():
