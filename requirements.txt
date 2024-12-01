@@ -1,5 +1,6 @@
 streamlit
 pyttsx3
 gtts
+vlc
 #playsound # Include custom modules or dependencies
 pydub
