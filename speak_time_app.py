@@ -3,7 +3,6 @@ import streamlit as st
 import pyttsx3
 import time
 import os
-import mpg123
 
 # Initialize text-to-speech engine
 # engine = pyttsx3.init()
