@@ -3,8 +3,8 @@ import streamlit as st
 import pyttsx3
 import time
 import os
-# import playsound
-import simpleaudio as sa
+import playsound
+# import simpleaudio as sa
 
 # Initialize text-to-speech engine
 # engine = pyttsx3.init()
@@ -37,7 +37,7 @@ if st.button("Start Time Announcements"):
     st.write(f"playsound is:{playsound}")
     tts = gTTS(text=text, lang='en')
     tts.save("time.mp3")
-    # playsound("time.mp3")
+    playsound("time.mp3")
     # Load the WAV file
     wave_obj = sa.WaveObject.from_wave_file("time.mp3")
     
@@ -45,4 +45,4 @@ if st.button("Start Time Announcements"):
     play_obj = wave_obj.play()
     
     # Wait for playback to finish before exiting
-    play_obj.wait_done()
+    # play_obj.wait_done()
